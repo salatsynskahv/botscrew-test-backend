@@ -33,11 +33,12 @@ public class LectorServiceImpl implements LectorService {
     }
 
     @Override
-    public void promoteLector(long lectorId) {
+    public LectorDto promoteLector(long lectorId) {
         Lector lector = lectorRepository.getById(lectorId);
         Degree nextDegree = Degree.getByValue(lector.getDegree().getValue() + 1);
         lector.setDegree(nextDegree);
-        lectorRepository.save(lector);
+        Lector lectorUpdated = lectorRepository.save(lector);
+        return LectorUtil.toDto(lectorUpdated);
     }
 
 

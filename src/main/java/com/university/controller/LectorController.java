@@ -4,8 +4,6 @@ import com.university.dto.LectorDto;
 import com.university.entities.Lector;
 import com.university.service.LectorService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,8 +23,8 @@ public class LectorController {
     }
 
     @PutMapping("/{lectorId}/promote")
-    public void promote(@PathVariable long lectorId) {
-        lectorService.promoteLector(lectorId);
+    public LectorDto promote(@PathVariable long lectorId) {
+        return lectorService.promoteLector(lectorId);
     }
 
     @PutMapping("/{lectorId}/update")

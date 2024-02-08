@@ -12,7 +12,7 @@ public interface LectorService {
 
     List<LectorDto> findLectorByQuery(String userQuery);
 
-    void promoteLector(long lectorId);
+    LectorDto promoteLector(long lectorId);
 
     void updateName(long lectorId, String name);
 }

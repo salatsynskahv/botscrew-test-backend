@@ -10,9 +10,14 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LectorDto {
+
     private Long id;
+
     private String name;
+
     private String degree;
+
     private int degreeId;
+
     private Set<Long> departmentIds;
 }
