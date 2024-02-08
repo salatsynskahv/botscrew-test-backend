@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: university
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/university
+    username: ganna
+    password: ganna
+
+app:
+  cors:
+    allowed-origins: http://localhost:3000
