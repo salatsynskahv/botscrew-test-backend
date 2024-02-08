@@ -22,7 +22,8 @@ public class DepartmentUtil {
                         lector.getName(),
                         lector.getDegree().name(),
                         lector.getDegree().getValue(),
-                        null)).collect(Collectors.toSet()));
+                        lector.getDepartments().stream().map(Department::getId).collect(Collectors.toSet()))
+                ).collect(Collectors.toSet()));
         return dto;
     }
 

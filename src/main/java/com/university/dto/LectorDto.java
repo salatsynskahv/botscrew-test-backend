@@ -14,5 +14,5 @@ public class LectorDto {
     private String name;
     private String degree;
     private int degreeId;
-    private Set<Department> departments;
+    private Set<Long> departmentIds;
 }
